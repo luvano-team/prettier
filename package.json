@@ -1,6 +1,6 @@
 {
   "name": "@luvano/prettier",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Enterprise-grade shared Prettier configuration for Luvano Team",
   "author": "Luvano Team",
   "license": "MIT",
@@ -12,9 +12,30 @@
     "access": "public"
   },
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs"
+    },
+    "./base": {
+      "import": "./dist/esm/presets/base.js",
+      "require": "./dist/cjs/presets/base.js"
+    },
+    "./typescript": {
+      "import": "./dist/esm/presets/typescript.js",
+      "require": "./dist/cjs/presets/typescript.js"
+    },
+    "./react": {
+      "import": "./dist/esm/presets/react.js",
+      "require": "./dist/cjs/presets/react.js"
+    },
+    "./nest": {
+      "import": "./dist/esm/presets/nest.js",
+      "require": "./dist/cjs/presets/nest.js"
+    },
+    "./markdown": {
+      "import": "./dist/esm/presets/markdown.js",
+      "require": "./dist/cjs/presets/markdown.js"
     }
   },
   "files": [
