@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies (Yarn)
+      - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Lint sources

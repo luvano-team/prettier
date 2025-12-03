@@ -7,12 +7,7 @@ export const baseConfig = {
   jsxSingleQuote: true,
   arrowParens: "avoid",
 
-  importOrder: [
-    "<THIRD_PARTY_MODULES>",
-    "^@/(.*)$",
-    "^../(.*)",
-    "^./(.*)"
-  ],
+  importOrder: ["<THIRD_PARTY_MODULES>", "^@/(.*)$", "^../(.*)", "^./(.*)"],
 
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
@@ -21,8 +16,8 @@ export const baseConfig = {
   importOrderParserPlugins: [
     "classProperties",
     "decorators-legacy",
-    "typescript"
+    "typescript",
   ],
 
-  plugins: ["@trivago/prettier-plugin-sort-imports"]
+  plugins: ["@trivago/prettier-plugin-sort-imports"],
 };

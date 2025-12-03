@@ -1,6 +1,6 @@
 export const yamlOverride = {
   files: ["*.yml", "*.yaml"],
   options: {
-    tabWidth: 2
-  }
+    tabWidth: 2,
+  },
 };

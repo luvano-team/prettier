@@ -1,4 +1,4 @@
 export const markdownConfig = {
   proseWrap: "always",
-  printWidth: 80
+  printWidth: 80,
 };
