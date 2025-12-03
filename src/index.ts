@@ -9,5 +9,4 @@ export * from "./overrides/yaml.override.js";
 export * from "./overrides/graphql.override.js";
 
 export * from "./utils/merge-config.js";
-export * from "./utils/validate-config.js";
 export * from "./utils/resolve-paths.js";
