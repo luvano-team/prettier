@@ -2,8 +2,18 @@
   "name": "@luvano/prettier",
   "version": "1.0.0",
   "description": "Enterprise-grade shared Prettier configuration for Luvano Team",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "author": "Luvano Team",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
   "files": [
     "dist",
     "schemas",
@@ -11,31 +21,36 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "node --test",
-    "prepare": "npm run build"
+    "build": "node scripts/build.mjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "generate:schema": "node scripts/generate-schema.mjs",
+    "release": "node scripts/release.mjs",
+    "test": "node --test"
   },
   "keywords": [
     "prettier",
-    "config",
+    "prettier-config",
     "formatter",
-    "luvano"
+    "luvano",
+    "code-style"
   ],
-  "author": "Luvano Team",
-  "license": "MIT",
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "ajv": "^8.12.0",
-    "deepmerge": "^4.3.1",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.6.0"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.0",
+    "deepmerge": "^4.3.1",
+    "ajv": "^8.12.0"
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
   },
-  "type": "module",
   "devDependencies": {
-    "@types/node": "^24.10.1",
-    "typescript": "^5.9.3"
+    "@types/node": "^20.11.19",
+    "typescript": "^5.4.2",
+    "semantic-release": "^23.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.0"
   }
 }

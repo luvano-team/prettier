@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies (Yarn)
+        run: yarn install --frozen-lockfile
+
+      - name: Lint sources
+        run: yarn prettier --check .
+
+      - name: Build package
+        run: yarn build
