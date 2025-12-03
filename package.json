@@ -1,0 +1,41 @@
+{
+  "name": "@luvano/prettier",
+  "version": "1.0.0",
+  "description": "Enterprise-grade shared Prettier configuration for Luvano Team",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "schemas",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "prettier",
+    "config",
+    "formatter",
+    "luvano"
+  ],
+  "author": "Luvano Team",
+  "license": "MIT",
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "ajv": "^8.12.0",
+    "deepmerge": "^4.3.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.0"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}
