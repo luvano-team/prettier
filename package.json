@@ -1,6 +1,6 @@
 {
   "name": "@luvano/prettier",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Enterprise-grade shared Prettier configuration for Luvano Team",
   "author": "Luvano Team",
   "license": "MIT",

@@ -1,4 +1,11 @@
 export const typescriptConfig = {
-  parser: "typescript",
+  overrides: [
+    {
+      files: "*.ts",
+      options: {
+        parser: "typescript",
+      },
+    },
+  ],
   singleAttributePerLine: false,
 };
