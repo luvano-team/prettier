@@ -14,9 +14,9 @@ export const baseConfig = {
   importOrderCaseInsensitive: true,
 
   importOrderParserPlugins: [
-    "classProperties",
-    "decorators-legacy",
     "typescript",
+    "classProperties",
+    "decorators-legacy"
   ],
 
   plugins: ["@trivago/prettier-plugin-sort-imports"],
