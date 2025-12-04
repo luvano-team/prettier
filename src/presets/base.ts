@@ -13,11 +13,11 @@ export const baseConfig = {
   importOrderSortSpecifiers: true,
   importOrderCaseInsensitive: true,
 
-  importOrderParserPlugins: [
-    "typescript",
-    "classProperties",
-    "decorators-legacy",
-  ],
+  // importOrderParserPlugins: [
+  //   "typescript",
+  //   "classProperties",
+  //   "decorators-legacy",
+  // ],
 
   plugins: ["@trivago/prettier-plugin-sort-imports"],
 };
